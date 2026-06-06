@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<h2>
+  <span class="status-dot" id="dot"></span>
+  微信文章接收器
+</h2>
+
+<div class="row">
+  <span class="label">接收链接</span>
+  <label class="toggle">
+    <input type="checkbox" id="toggle-enabled">
+    <span class="slider"></span>
+  </label>
+</div>
+
+<div class="row">
+  <span class="label">ntfy 连接</span>
+  <span id="conn-status">检测中...</span>
+</div>
+
+<div class="row">
+  <span class="label">局域网服务</span>
+  <span id="local-status">检测中...</span>
+</div>
+
+<button id="btn-pull">📥 立即拉取消息</button>
+<button id="btn-reconnect">🔁 重连 ntfy</button>
+<button id="btn-organize">🗂️ 整理收藏夹</button>
+
+<div id="organize-status" style="display:none"></div>
+
+<div class="hint">
+  整理：重新解析所有收藏的微信文章<br>
+  按公众号归类，修正标题
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

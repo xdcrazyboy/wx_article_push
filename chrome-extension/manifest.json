@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "微信文章接收器",
+  "version": "2.2",
+  "description": "接收手机推送的微信文章链接，自动收藏+打开（支持局域网+公网）",
+  "permissions": ["tabs", "storage", "alarms", "notifications", "bookmarks", "scripting"],
+  "host_permissions": [
+    "http://localhost:8765/*",
+    "http://127.0.0.1:8765/*",
+    "https://ntfy.sh/*",
+    "https://mp.weixin.qq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "48": "icon.png" }
+  },
+  "icons": { "48": "icon.png" }
+}
