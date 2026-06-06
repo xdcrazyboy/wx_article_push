@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微信文章推送项目说明</title>
+  <style>
+    /* 极简精致的全局页面样式布局 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f6f8fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      margin: 40px 20px;
+      padding: 40px;
+      max-width: 900px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* 自定义美化内部的 Markdown 渲染样式 */
+    zero-md {
+      --zero-md-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+  </style>
+  <!-- 引入专用的轻量级 Markdown 零配置渲染组件 -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 核心组件：它会自动异步读取并渲染你本地的 README.md -->
+    <zero-md src="README.md"></zero-md>
+  </div>
+
+</body>
+</html>
